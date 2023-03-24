@@ -1,0 +1,2 @@
+In this repository there are two NLP components, a search engine similar to how google operates and a question/answer pipeline that allows the user to ask a question and retrieve an answer based on the database of text used for the index.
+The indexes are created using a pdf of J.R.R Tolkien's The Lord of The Rings. The search engine was created using Whoosh and the question/answer pipeline was created using Haystack and two models from Huggingface for sentence transformation and question/answer retrieval.
