@@ -94,7 +94,7 @@ class ContextualSearch(ttk.Frame):
         #retrieve input question
         contextual_question = self.question.get()
         #send question to QA pipeline
-        results = search_functions.query_faiss_index('C:/Users/dylan/OneDrive/Documents/search_engine/LoTR_Faiss_Index', contextual_question)
+        results = search_functions.query_faiss_index('LoTR_Faiss_Index', contextual_question)
         
         if contextual_question != '':
             self.output_box.insert(tk.END, f"Question: {contextual_question}\n\n")
@@ -154,7 +154,7 @@ class LiteralSearch(ttk.Frame):
         #retrieve input question
         literal_search = self.search.get()
         #search whoosh index
-        query, results = search_functions.query_index('C:/Users/dylan/OneDrive/Documents/search_engine/LordOfTheRingsWhooshIndex', literal_search)
+        query, results = search_functions.query_index('LordOfTheRingsWhooshIndex', literal_search)
         
         if literal_search != '':
             self.search_output_box.insert(tk.END, f"Query: {query}\n\n")
